@@ -58,13 +58,13 @@ export default function Screen() {
             </CardDescription>
             <Tooltip delayDuration={150}>
               <TooltipTrigger className="px-2 pb-0.5 active:opacity-50">
-                <View className={cn(isSpinning && "animate-spin")}>
-                  <Info
-                    size={14}
-                    strokeWidth={2.5}
-                    className="w-4 h-4 text-foreground/70"
-                  />
-                </View>
+                {/* <View className={cn(isSpinning && "animate-spin")}> */}
+                <Info
+                  size={14}
+                  strokeWidth={2.5}
+                  className="w-4 h-4 text-foreground/70"
+                />
+                {/* </View> */}
               </TooltipTrigger>
               <TooltipContent className="py-2 px-4 shadow">
                 <Text className="native:text-lg">Freelance</Text>
@@ -115,10 +115,17 @@ export default function Screen() {
             className="shadow shadow-foreground/5"
             onPress={updateProgressValue}
           >
-            <Text>Update</Text>
+            <Text className="text-foreground">Update</Text>
           </Button>
         </CardFooter>
       </Card>
+      <Button
+        variant="outline"
+        className="shadow shadow-foreground/5"
+        onPress={updateProgressValue}
+      >
+        <Text className="text-foreground">Update</Text>
+      </Button>
     </View>
   );
 }
