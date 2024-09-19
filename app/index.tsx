@@ -62,10 +62,7 @@ export default function Screen() {
                   <Info
                     size={14}
                     strokeWidth={2.5}
-                    className={cn(
-                      "w-4 h-4 text-foreground/70",
-                      isSpinning && "animate-spin"
-                    )}
+                    className="w-4 h-4 text-foreground/70"
                   />
                 </View>
               </TooltipTrigger>
