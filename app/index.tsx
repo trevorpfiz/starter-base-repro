@@ -51,20 +51,22 @@ export default function Screen() {
             </AvatarFallback>
           </Avatar>
           <View className="p-3" />
-          <CardTitle className="pb-2 text-center">Rick Sanchez</CardTitle>
+          <CardTitle className="pb-2 text-center text-lg font-bold">
+            Rick Sanchez
+          </CardTitle>
           <View className="flex-row">
             <CardDescription className="text-base font-semibold">
               Scientist
             </CardDescription>
             <Tooltip delayDuration={150}>
               <TooltipTrigger className="px-2 pb-0.5 active:opacity-50">
-                {/* <View className={cn(isSpinning && "animate-spin")}> */}
-                <Info
-                  size={14}
-                  strokeWidth={2.5}
-                  className="w-4 h-4 text-foreground/70"
-                />
-                {/* </View> */}
+                <View className="animate-spin">
+                  <Info
+                    size={14}
+                    strokeWidth={2.5}
+                    className="w-4 h-4 text-foreground/70"
+                  />
+                </View>
               </TooltipTrigger>
               <TooltipContent className="py-2 px-4 shadow">
                 <Text className="native:text-lg">Freelance</Text>
